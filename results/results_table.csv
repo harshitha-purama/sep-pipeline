@@ -1,0 +1,3 @@
+Modality,N epochs,Mean SNR (dB),SNR 95% CI,Unit,N20 latency (ms),N20 amplitude (fT/cm),P25 latency (ms),P25 amplitude (fT/cm),N35 latency (ms),N35 amplitude (fT/cm),P45 latency (ms),P45 amplitude (fT/cm),N20 amplitude (pT),P25 amplitude (pT),N35 amplitude (pT),P45 amplitude (pT)
+Gradiometer (ESG proxy),111,15.67,"[14.92, 16.47]",fT/cm,23.3,-75.824,40.0,252.449,40.0,252.449,43.3,203.535,,,,
+Magnetometer (EEG proxy),96,15.53,"[14.37, 16.70]",pT,23.3,,40.0,,40.0,,56.6,,0.199,-0.636,-0.636,0.532

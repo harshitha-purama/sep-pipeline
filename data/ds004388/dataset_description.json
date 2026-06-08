@@ -1,0 +1,23 @@
+{
+    "Name": "Somatosensory evoked potentials in the human spinal cord to mixed nerve stimulation",
+    "Authors": [
+        "Birgit Nierula",
+        "Tilman Stephani",
+        "Merve Kaptan",
+        "André Moruaux",
+        "Burkhard Maess",
+        "Gabriel Curio",
+        "Vadim V. Nikulin",
+        "Falk Eippert"
+    ],
+    "Acknowledgements": "This data was acquired with the help of our student researcg assistants Janek Haschke, Pia-Lena Baisch, Paula Kosel, Max Braune, Samuel Simeon, and Marleen Löffler.",
+    "ReferencesAndLinks": [
+        "https://osf.io/sgptzt"
+    ],
+    "Funding": [
+        "n/a"
+    ],
+    "DatasetDOI": "doi:10.18112/openneuro.ds004388.v1.0.0",
+    "BIDSVersion": "1.6.0",
+    "License": "CC0"
+}

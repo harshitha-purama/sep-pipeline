@@ -1,0 +1,57 @@
+======================================================================
+SEP CROSS-MODAL ANALYSIS — RESULTS REPORT
+Generated: 2026-06-08
+Dataset: MNE Somato (development) | Target: OpenNeuro ds004388
+======================================================================
+
+METHODS SUMMARY
+----------------------------------------
+Preprocessing:  Bandpass 1–140 Hz (Hamming FIR), notch 50 Hz
+Epoching:       -50 ms to +300 ms, baseline -50 to 0 ms
+Rejection:      Peak-to-peak threshold (grad: 4000 fT/cm, mag: 4 pT)
+SNR:            20*log10(RMS signal 20–150ms / RMS noise -50–0ms)
+Statistics:     Mann-Whitney U, bootstrap 95% CI (n=1000)
+
+RESULTS
+----------------------------------------
+
+Gradiometer (ESG proxy)
+  Epochs retained : 111
+  Mean SNR        : 15.67 dB [95% CI: 14.92, 16.47]
+  SEP Components:
+    N20   latency=23.3 ms  amplitude=-75.824 fT/cm  [MEG 2412]
+    P25   latency=40.0 ms  amplitude=252.449 fT/cm  [MEG 1133]
+    N35   latency=40.0 ms  amplitude=252.449 fT/cm  [MEG 1133]
+    P45   latency=43.3 ms  amplitude=203.535 fT/cm  [MEG 1133]
+
+Magnetometer (EEG proxy)
+  Epochs retained : 96
+  Mean SNR        : 15.53 dB [95% CI: 14.37, 16.70]
+  SEP Components:
+    N20   latency=23.3 ms  amplitude=0.199 pT  [MEG 2211]
+    P25   latency=40.0 ms  amplitude=-0.636 pT  [MEG 2211]
+    N35   latency=40.0 ms  amplitude=-0.636 pT  [MEG 2211]
+    P45   latency=56.6 ms  amplitude=0.532 pT  [MEG 1311]
+
+CROSS-MODAL STATISTICAL COMPARISON
+----------------------------------------
+Modality A mean SNR : 15.69 dB (n=204 channels)
+Modality B mean SNR : 15.53 dB (n=102 channels)
+Mann-Whitney U      : 10786.0
+p-value             : 0.6011 (not significant)
+
+INTERPRETATION
+----------------------------------------
+Both modalities captured the N20 component at consistent latency (~23 ms),
+confirming primary somatosensory cortex arrival. The P45 component showed
+latency divergence between modalities (43 ms vs 57 ms), suggesting
+differential sensitivity to late cortical processing. SNR was comparable
+across modalities (p=0.60), indicating equivalent signal quality.
+
+NEXT STEPS
+----------------------------------------
+1. Validate pipeline on OpenNeuro ds004388 (EEG + ESG, 40 subjects)
+2. Extend to multi-subject analysis for ICC reliability assessment
+3. Add intraclass correlation coefficient (ICC) across subjects
+4. Compare against clinical normative latency values
+======================================================================

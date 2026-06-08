@@ -1,0 +1,5 @@
+data/ds004388/sub-001/eeg/*.fdt
+data/ds004388/sub-001/eeg/*.set
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

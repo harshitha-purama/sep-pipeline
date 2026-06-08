@@ -1,0 +1,9 @@
+Modality,Component,Latency ICC,Latency CI,Latency mean (ms),Latency SD (ms),Amplitude ICC,Amplitude CI,Amplitude category,Latency category
+Gradiometer (ESG proxy),N20,0.257,"[0.130, 0.550]",29.9,6.08,0.399,"[0.230, 0.690]",Poor,Poor
+Gradiometer (ESG proxy),P25,0.954,"[0.910, 0.990]",38.9,2.19,0.323,"[0.170, 0.620]",Poor,Excellent
+Gradiometer (ESG proxy),N35,0.92,"[0.840, 0.970]",38.9,2.24,0.323,"[0.170, 0.620]",Poor,Excellent
+Gradiometer (ESG proxy),P45,0.6,"[0.410, 0.840]",39.0,2.67,0.324,"[0.170, 0.620]",Poor,Moderate
+Magnetometer (EEG proxy),N20,0.014,"[-0.000, 0.090]",28.0,6.66,-0.003,"[-0.010, 0.040]",Poor,Poor
+Magnetometer (EEG proxy),P25,0.091,"[0.040, 0.280]",39.0,3.27,-0.005,"[-0.010, 0.030]",Poor,Poor
+Magnetometer (EEG proxy),N35,0.018,"[-0.000, 0.100]",41.6,6.63,-0.011,"[-0.020, 0.010]",Poor,Poor
+Magnetometer (EEG proxy),P45,0.015,"[-0.000, 0.090]",43.9,9.67,-0.01,"[-0.020, 0.010]",Poor,Poor

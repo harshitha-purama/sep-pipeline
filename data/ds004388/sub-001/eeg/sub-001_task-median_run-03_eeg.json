@@ -1,0 +1,36 @@
+{
+  "TaskName": "median",
+  "EEGReference": "EEG: RM (right mastoid); ESG: TH6 (over 6th thoracic vertebra); ECG: ECGN (below right clavicle), ENG: (1) left Erb's Point: EPN (ref placed over right Erb's point), (2) Biceps: BicepsN (approx. 3 cm proximal to active electrode), (3) Knee: kneeMN (located approx. 3cm proximal to kneeM, all knee channels had the same reference);",
+  "PowerLineFrequency": 50,
+  "InstitutionName": "Max Planck Institute for Human Cognitive and Brain Sciences",
+  "InstitutionAddress": "Stephanstr. 1A, 04103 Leipzig, Germany",
+  "Manufacturer": "Bittum",
+  "ManufacturersModelName": "NeurOne",
+  "SoftwareVersions": "NeurOne 1.4.1.64",
+  "TaskDescription": "Participants were laying on their back. Mixed median nerve stimulation at the left wrist.",
+  "Instructions": "Relax and try not to move. Look at the fixation cross during the recordings and blink normal.",
+  "DeviceSerialNumber": "n/a",
+  "CapManufacturersModelName": "64Ch-BrainCap for TMS with Multitrodes (BC-TMS-64-X24)",
+  "TriggerChannelCount": 0,
+  "EEGGround": "EEG: placed at POz, ESG: placed approx. over 9th thoracic vertebra",
+  "EEGPlacementScheme": "10-10",
+  "HardwareFilters": {
+    "Anti_aliasing_filter": {
+      "cutoff_Hz": 2500
+    },
+    "Sampling_frequency": {
+      "fundamental_frequency_Hz": 80000,
+      "output_frequency_Hz": 10000
+    }
+  },
+  "SubjectArtefactDescription": "n/a",
+  "EEGChannelCount": 67,
+  "MiscChannelCount": 47,
+  "ECGChannelCount": 1,
+  "EMGChannelCount": 2,
+  "RecordingType": "continuous",
+  "RecordingDuration": 393.6511,
+  "SamplingFrequency": 10000,
+  "EOGChannelCount": 0,
+  "SoftwareFilters": "n/a"
+}

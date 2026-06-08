@@ -1,0 +1,6 @@
+Modality,Location,Component,Latency (ms),Amplitude (µV),Channel,Mean SNR (dB)
+EEG,Scalp (somatosensory cortex),N20,20.0,6.6246,FC2,4.06
+EEG,Scalp (somatosensory cortex),P25,30.0,-5.1759,FC4,4.06
+EEG,Scalp (somatosensory cortex),N35,43.4,3.2261,FC2,4.06
+ESG,Spinal surface electrodes,N13,17.8,3.5141,AL,-4.3
+ENG,Erb's point (peripheral nerve),N9,10.8,-4.2886,EP,-8.81
