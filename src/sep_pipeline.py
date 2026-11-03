@@ -13,9 +13,11 @@ matplotlib.use('Agg')  # non-interactive backend for codespace
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+
 mne.set_log_level('WARNING')
 
-RESULTS_DIR = Path('/workspaces/review/results')
+RESULTS_DIR = ROOT / 'results'
 FIGURES_DIR = RESULTS_DIR / 'figures'
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 

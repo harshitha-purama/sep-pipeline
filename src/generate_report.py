@@ -12,11 +12,13 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from scipy import stats
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
 from datetime import date
 
 mne.set_log_level('WARNING')
 
-RESULTS_DIR = Path('/workspaces/review/results')
+RESULTS_DIR = ROOT / 'results'
 FIGURES_DIR = RESULTS_DIR / 'figures'
 
 MODALITIES = {

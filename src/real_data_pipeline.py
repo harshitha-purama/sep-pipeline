@@ -17,12 +17,14 @@ import matplotlib.pyplot as plt
 from scipy import stats
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+
 mne.set_log_level('WARNING')
 
-DATA_FILE   = Path('/workspaces/review/data/ds004388/sub-001/eeg/sub-001_task-median_run-03_eeg.set')
-CHAN_FILE    = Path('/workspaces/review/data/ds004388/sub-001/eeg/sub-001_task-median_run-03_channels.tsv')
-FIGURES_DIR = Path('/workspaces/review/results/figures')
-RESULTS_DIR = Path('/workspaces/review/results')
+DATA_FILE   = ROOT / 'data/ds004388/sub-001/eeg/sub-001_task-median_run-03_eeg.set'
+CHAN_FILE    = ROOT / 'data/ds004388/sub-001/eeg/sub-001_task-median_run-03_channels.tsv'
+FIGURES_DIR = ROOT / 'results' / 'figures'
+RESULTS_DIR = ROOT / 'results'
 
 # SEP component search windows per modality (ms) — non-overlapping
 COMPONENT_WINDOWS = {

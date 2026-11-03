@@ -19,10 +19,12 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+
 mne.set_log_level('WARNING')
 
-FIGURES_DIR = Path('/workspaces/review/results/figures')
-RESULTS_DIR = Path('/workspaces/review/results')
+FIGURES_DIR = ROOT / 'results' / 'figures'
+RESULTS_DIR = ROOT / 'results'
 
 MODALITIES    = {'Gradiometer (ESG proxy)': 'grad', 'Magnetometer (EEG proxy)': 'mag'}
 SEARCH_WINDOWS = {'N20': (15, 30), 'P25': (22, 40), 'N35': (30, 55), 'P45': (40, 70)}

@@ -9,7 +9,7 @@ This project analyses somatosensory evoked potentials (SEPs) from a multimodal n
 
 **OpenNeuro ds004388** — Somatosensory evoked potentials in the human spinal cord  
 Subject: sub-001, task: median nerve stimulation, run-03  
-40 subjects total (this pipeline validated on sub-001)
+One subject analysed so far (sub-001)
 
 Three recording modalities in a single session:
 
@@ -29,7 +29,7 @@ When a nerve is electrically stimulated (here: the median nerve at the wrist), t
 - **N13** at the spinal cord surface — the signal reaches the dorsal horn of the cervical spine around 13 ms
 - **N20** at the scalp — the signal arrives at the primary somatosensory cortex around 20 ms
 
-The time between N9 and N20 (about 9 ms) is called the **central conduction time**, a direct measure of spinal cord and brainstem pathway integrity. This is used clinically to monitor patients during spinal surgery and to diagnose conditions like multiple sclerosis.
+The time between the cervical N13 and the N20 is the **central conduction time**, a direct measure of spinal cord and brainstem pathway integrity. This is used clinically to monitor patients during spinal surgery and to diagnose conditions like multiple sclerosis.
 
 ---
 
@@ -41,7 +41,9 @@ The figure below shows the evoked waveform from each modality. Left to right rep
 
 ![Ascending Pathway](results/figures/real_data_ascending_pathway.png)
 
-All five SEP components were detected within published clinical normative ranges:
+> **Status: under revision.** The table below is a first pass. It takes the largest absolute value across all channels in each window, with no cardiac artefact removal or stimulus artefact handling, so the labels are not yet reliable. The "N20" is positive on FC2, a frontal channel, and the "P25" is negative. A true N20 is negative over the right centro-parietal scalp for this left-wrist stimulation. The "N13" sits at the edge of its 10-18 ms window on one channel, 5 ms later than the name implies, and it is not visible in the channel mean.
+
+First-pass peak picks:
 
 | Modality | Component | Latency | Amplitude | Clinical range |
 |---|---|---|---|---|
@@ -51,13 +53,13 @@ All five SEP components were detected within published clinical normative ranges
 | EEG (cortex) | P25 | 30.0 ms | 5.2 µV | 24 to 30 ms |
 | EEG (cortex) | N35 | 43.4 ms | 3.2 µV | 35 to 50 ms |
 
-**Central conduction time: 9.2 ms** (N20 minus N9 = 20.0 minus 10.8). This is within the normal range for a healthy adult.
+N9-to-N20 interval: 9.2 ms (20.0 minus 10.8), pending the revision above. Central conduction time proper is measured from the cervical N13 to the N20.
 
 ### Signal-to-Noise Ratio by Modality
 
 ![SNR Comparison](results/figures/real_data_snr_comparison.png)
 
-EEG shows the highest SNR (4.1 dB) because it averages signal across 64 spatially distributed channels. ESG and ENG are lower in SNR, which is expected given fewer channels and the noisier recording environment for spinal and peripheral electrodes. All 500 stimulus trials were used for averaging.
+EEG shows the highest mean per-channel SNR (4.1 dB). SNR is computed per channel and then averaged, so channel count does not explain the difference. The spinal and peripheral responses are smaller, and the stimulus artefact is not yet removed. All 500 stimulus trials were used for averaging.
 
 ### Cross-Modal Comparison (Development Dataset)
 
@@ -159,4 +161,6 @@ Cruccu G, Aminoff MJ, Curio G, et al. Recommendations for the clinical use of so
 
 Nuwer MR. Spinal cord monitoring with somatosensory techniques. *Journal of Clinical Neurophysiology*. 1998;15(3):183-193.
 
-Dataset: Huber E et al. Somatosensory evoked potentials in the human spinal cord. OpenNeuro ds004388. 2024.
+Dataset: Nierula B, Stephani T, Kaptan M, et al. Somatosensory evoked potentials in the human spinal cord to mixed nerve stimulation. OpenNeuro ds004388. doi:10.18112/openneuro.ds004388.v1.0.0
+
+Nierula B, et al. A multichannel electrophysiological approach to noninvasively and precisely record human spinal cord activity. *PLOS Biology*. 2024. doi:10.1371/journal.pbio.3002828

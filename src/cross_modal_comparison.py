@@ -18,9 +18,11 @@ import matplotlib.pyplot as plt
 from scipy import stats
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+
 mne.set_log_level('WARNING')
 
-FIGURES_DIR = Path('/workspaces/review/results/figures')
+FIGURES_DIR = ROOT / 'results' / 'figures'
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 MODALITIES = {
