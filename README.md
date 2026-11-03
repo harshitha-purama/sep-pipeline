@@ -85,10 +85,11 @@ Intraclass correlation coefficient (ICC(A,1), two-way random effects, absolute a
 
 ```
 src/
+  sep_fixed_channels.py     corrected analysis: fixed channels, artefact interpolation, validity checks
   sep_pipeline.py           preprocessing, epoching, component extraction, SNR
   cross_modal_comparison.py two-modality comparison with bootstrap statistics
   icc_analysis.py           intraclass correlation coefficient across pseudo-subjects
-  real_data_pipeline.py     full pipeline on real ds004388 data (EEG, ESG, ENG)
+  real_data_pipeline.py     first-pass pipeline on real ds004388 data (EEG, ESG, ENG)
   generate_report.py        summary figures, results table, written report
 
 results/
@@ -145,8 +146,11 @@ aws --no-sign-request s3 cp \
 
 ### Running
 
+The corrected analysis reads each component from one fixed channel, across several subjects. [Open it in Colab](https://colab.research.google.com/github/harshitha-purama/sep-pipeline/blob/main/notebooks/rerun_sep_fixed_channels.ipynb) or run:
+
 ```bash
-python src/real_data_pipeline.py     # main results on real data
+python src/sep_fixed_channels.py --subjects sub-001 sub-002   # corrected analysis
+python src/real_data_pipeline.py     # first-pass results on real data
 python src/sep_pipeline.py           # development pipeline on MNE somato dataset
 python src/cross_modal_comparison.py # cross-modal comparison
 python src/icc_analysis.py           # reliability analysis
